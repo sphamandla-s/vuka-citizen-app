@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/"
+title = "Vuka"
+version = "1.0.0"
+id = "artifacts/vuka"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/" ]
+localPort = 18654
+
+[services.development]
+run = "pnpm --filter @workspace/vuka run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/vuka", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/vuka", "run", "serve" ]
+
+[services.env]
+PORT = "18654"
+BASE_PATH = "/"

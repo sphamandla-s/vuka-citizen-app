@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "Vuka",
+    "slug": "vuka",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "vuka",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.sminfinitetech.vuka",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Vuka uses your location to show nearby reports and share your position in emergencies.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Vuka uses your location to alert responders during a panic.",
+        "NSCameraUsageDescription": "Vuka uses your camera to attach photos to civic reports.",
+        "NSPhotoLibraryUsageDescription": "Vuka accesses your photos to attach images to civic reports.",
+        "NSMicrophoneUsageDescription": "Vuka uses the microphone to stream audio during a panic alert.",
+        "NSMotionUsageDescription": "Vuka detects shaking to trigger emergency alerts."
+      }
+    },
+    "android": {
+      "package": "com.sminfinitetech.vuka",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#0A0A0A"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO",
+        "VIBRATE",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Vuka uses your location to show nearby reports and alert responders during a panic."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Vuka accesses your photos to attach images to civic reports.",
+          "cameraPermission": "Vuka uses your camera to capture evidence for reports."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Vuka uses the microphone to stream audio during a panic alert."
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
